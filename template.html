@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-image: url('https://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png');
+        }
+
+        footer {
+            min-height: 200px;
+        }
+    </style>
+</head>
+
+<body class="max-w-[980px] mx-auto">
+    <div class="title pl-4 py-4">
+        <h1 class="text-[30px] text-[#919191] leading-[37.5px]">Pokédex</h1>
+    </div>
+    <section class="search-form pl-4 bg-[#313131]">
+        <div class="container search-wrapper">
+            <div class="flex text-[#fff] py-8 gap-x-[48px]">
+                <div class="search-col basis-[40%]">
+                    <h2 class="text-[26px] font-normal">Name or Number</h2>
+                    <div class="flex pt-3 gap-x-6">
+                        <input type="text" name="search"
+                            class="h-[48px] w-full border-rounded rounded text-[#000] pl-4">
+                        <button class="search-button bg-[#ee6b2f] h-[48px] w-[72px] border-rounded rounded">
+                            <div class="fa fa-search"></div>
+                        </button>
+                    </div>
+                    <div class="search-sub-title pt-3">
+                        <span>Use the Advanced Search to explore Pokémon by type,
+                            weakness,
+                            Ability,
+                            and more!</span>
+                    </div>
+                </div>
+                <div class="search-desc w-[430px] pt-3">
+                    <div class="search-desc-content text-[20px] bg-[#4dad5b] p-4 pb-6 border-rounded rounded-lg">Search
+                        for a Pokémon by name or using its National Pokédex number.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pokemon bg-[#fff] px-4">
+        <div class="container pokemon-wrapper">
+            <div class="flex justify-between pt-8">
+                <button id="surprise-button"
+                    class="surprise-button flex w-[35%] py-3 px-5 items-center gap-x-2 text-[#fff] bg-[#30a7d7] justify-center rounded-md">
+                    <div class="surprise-button-icon fa fa-refresh"></div>
+                    <span>Surprise Me!</span>
+                </button>
+                <div class="pokemon-sort basis-[45%] max-w-[45%]">
+                    <div class="flex gap-x-4 items-center">
+                        <p class="text-[#a4a4a4] text-[20px] whitespace-nowrap">Sort By</p>
+                        <div class="sort-select text-[#fff] w-full">
+                            <select name="sort" id="sort"
+                                class="bg-[#313131] border-rounded rounded-md px-4 py-2 appearance-none w-full">
+                                <option value="1" class="sort-select-option">
+                                    Lowest Number (First)
+                                </option>
+                                <option value="2" class="sort-select-option">
+                                    Highest Number (First)
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pokemon-list pt-8">
+                <div class="pokemon-list-wrapper">
+                    <ul class="grid grid-cols-4 gap-4">
+                        <li class="pokemon-item">
+                            <div class="flex flex-col">
+                                <div class="relative pt-[100%] bg-[#F2F2F2] border-rounded rounded-md">
+                                    <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png" alt=""
+                                        class="absolute top-0">
+                                </div>
+                                <div class="pl-4">
+                                    <p class="pokemon-order text-[#919191] text-[13px] font-medium">#0001</p>
+                                    <p class="pokemon-name my-1 text-[#313131] text-[24px] font-medium">Bulbasaur</p>
+                                    <div
+                                        class="flex pokemon-type-list gap-1 text-[#212121] text-center text-[12px] pb-6">
+                                        <p class="pokemon-type border-rounded rounded w-[72px] bg-[#9bcc50] ">
+                                            Grass
+                                        </p>
+                                        <p
+                                            class="pokemon-type bg-[#b97fc9] border-rounded rounded w-[72px] text-[#fff]">
+                                            Poison
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="loadmore py-[50px] text-center">
+                <button class="loadmore-btn bg-[#30a7d7] text-[#fff] px-5 py-3 border-rounded rounded-md" id="loadmore">
+                    Load more Pokémon
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer></footer>
+
+</body>
+
+</html>
