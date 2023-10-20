@@ -29,14 +29,14 @@ export const LoadMoreElement = () => {
   const [pokemonListPagination, setPokemonListPagination, subscribe] = useAtom(
     ATOM_KEYS.POKEMON_LIST_PAGINATION,
     {
-      limit: 12,
+      limit: 15,
       offset: 0,
     }
   );
 
   const handleClickLoadMore = () => {
     const { limit, offset } = pokemonListPagination();
-    const newLimit = limit + 12;
+    const newLimit = limit + 15;
 
     setPokemonListPagination({
       ...offset,

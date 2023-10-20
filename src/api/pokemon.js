@@ -24,7 +24,7 @@ export function pokemonApi() {
         console.error(error);
       }
     },
-    getPokemonList: async function (limit = 12, offset = 0) {
+    getPokemonList: async function (limit = 15, offset = 0) {
       try {
         const response = await fetchData({
           url: `${baseUrl}?limit=${limit}&offset=${offset}`,

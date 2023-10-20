@@ -58,7 +58,7 @@ export const SearchInputElement = () => {
   const [__, setPokemonListPagination] = useAtom(
     ATOM_KEYS.POKEMON_LIST_PAGINATION,
     {
-      limit: 12,
+      limit: 15,
       offset: 0,
     }
   );
@@ -66,7 +66,7 @@ export const SearchInputElement = () => {
   const handleClickSearch = (event) => {
     if (searchValue() === "") {
       setPokemonListPagination({
-        limit: 12,
+        limit: 15,
         offset: 0,
       });
       return;

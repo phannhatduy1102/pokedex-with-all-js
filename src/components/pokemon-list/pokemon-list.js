@@ -22,7 +22,7 @@ function PokemonList(props = {}) {
         children: [
           {
             type: "ul",
-            className: "grid grid-cols-4 gap-4",
+            className: "grid grid-cols-5 gap-4",
             id: "pokemon-list",
             children: pokemonItemElements.map((pokemon) => ({
               type: "element",
@@ -47,7 +47,7 @@ export const PokemonListElement = () => {
 
   const [pokemonListPagination, setPokemonListPagination, subscribePagination] =
     useAtom(ATOM_KEYS.POKEMON_LIST_PAGINATION, {
-      limit: 12,
+      limit: 15,
       offset: 0,
     });
 

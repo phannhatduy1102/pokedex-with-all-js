@@ -1,4 +1,3 @@
-import { pokemonApi } from "../../api/index.js";
 import { ATOM_KEYS } from "../../constants/index.js";
 import { useAtom } from "../../lib/index.js";
 import { randomNumber, withComponent } from "../../utils/index.js";
@@ -99,7 +98,7 @@ export const PokemonFilterElement = () => {
   const handleClickSurprise = (e) => {
     e.stopPropagation();
     setPokemonListPagination({
-      limit: 12,
+      limit: 15,
       offset: randomNumber(0, 100),
     });
   };
