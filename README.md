@@ -1,1 +1,1 @@
-# pokedex-with-all-js
+# pokedex-with-js
